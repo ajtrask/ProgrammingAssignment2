@@ -4,7 +4,6 @@
 ## makeCacheMatrix creates a matrix "object" that has funtions to:
 ##   set and get the matrix
 ##   set and get the inverse of the matrix
-
 makeCacheMatrix <- function(x = matrix()) {
   minv <- NULL
   
@@ -27,13 +26,11 @@ makeCacheMatrix <- function(x = matrix()) {
   list(set = set, get = get, setinv = setinv, getinv = getinv)
 }
 
-
 ## cacheSolve calculates the inverse of the matrix "object"
 ## created in makeCacheMatrix by:
 ##     checking if the inverse has already been calculated
 ##     and getting the inverse from the cache
 ##     or calculating the invese and storing in the cache
-
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
   minv <- x$getinv()
